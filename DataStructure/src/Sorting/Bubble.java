@@ -2,15 +2,8 @@ package Sorting;
 import java.util.*;
 public class Bubble 
 {
-	public static void main(String[] ar)
+	public static void sort(int arr[],int n)
 	{
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int arr[]=new int[n];
-		for(int i=0;i<n;i++)
-		{
-			arr[i]=sc.nextInt();
-		}
 		for(int i=0;i<n-1;i++)
 		{
 			for(int j=0;j<(n-1-i);j++)
@@ -23,9 +16,23 @@ public class Bubble
 				}
 			}
 		}
+		System.out.print("Sorted elements are:");
 		for(int i=0;i<n;i++)
 		{
 			System.out.print(arr[i]+" ");
 		}
+	}
+	public static void main(String[] ar)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter no. of elements:");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.print("Enter elements:");
+		for(int i=0;i<n;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		sort(arr,n);
 	}
 }
