@@ -2,6 +2,12 @@ package Sorting;
 import java.util.*;
 public class BinarySort 
 {
+	public static void swapper(int element[],int start,int end)
+	{
+		int temp=element[start];
+		element[start]=element[end];
+		element[end]=temp;
+	}
 	public static void main(String[] ar)
 	{
 		Scanner sc=new Scanner(System.in);
@@ -18,9 +24,7 @@ public class BinarySort
 		{
 			if(element[start]==0)
 			{
-				int temp=element[start];
-				element[start]=element[end];
-				element[end]=temp;
+				swapper(element,start,end);
 				if(element[start]==1)
 				{
 					start++;
